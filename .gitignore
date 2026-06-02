@@ -1,0 +1,12 @@
+data/*.csv
+data/*.parquet
+clickhouse_data/
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db
+*.log
+.claude/
