@@ -10,3 +10,5 @@ venv/
 Thumbs.db
 *.log
 .claude/
+.vscode/
+.idea/

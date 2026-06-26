@@ -25,5 +25,21 @@ services:
       retries: 5
       start_period: 30s
 
+  superset:
+    build:
+      context: .
+      dockerfile: Dockerfile.superset
+    container_name: hm-superset
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset_data:/app/superset_home
+    environment:
+      SUPERSET_SECRET_KEY: "hm_analytics_secret_key_2024"
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+
 volumes:
   clickhouse_data:
+  superset_data:
